@@ -13,7 +13,7 @@ path=r'C:\Users\dxz\Desktop'
 ###给图片添加噪声
 def get_NSR(X,NSR):
     m,n=X.shape
-    #先求原始图像的能量
+    #先求原始图像的能量(即图片的方差)
     ps=(np.std(X))**2
     #噪声的能量
     pn=ps*pow(10,NSR/10.)-ps
